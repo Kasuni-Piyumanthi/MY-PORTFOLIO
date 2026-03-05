@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Alex Morgan — CS Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero">AM.</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#articles">Articles</a></li>
+    <li><a href="#memories">Memories</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Computer Science · Undergraduate Portfolio</div>
+    <h1 class="hero-name">Alex <span>Morgan</span></h1>
+    <p class="hero-tagline">Building elegant solutions at the intersection of algorithms, systems, and human experience.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-gold">View Projects</a>
+      <a href="#cv" class="btn btn-outline">Download CV</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header">
+    <span class="section-label">01 — Introduction</span>
+    <h2 class="section-title">About Me</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="about-grid">
+    <div class="about-photo-wrap">
+      <div class="about-photo-placeholder">
+        <img src="images/photo.png" alt="My Photo" class="about-photo">
+        <div class="about-photo-frame"></div>
+      </div>
+      <div class="about-photo-frame"></div>
+    </div>
+    <div class="about-text">
+      <h3>Hi, I'm Alex — a CS student who loves to build things.</h3>
+      <p>I'm a third-year Computer Science undergraduate passionate about software engineering, machine learning, and open-source development. I thrive at the intersection of theory and practice — turning complex ideas into clean, functional code.</p>
+      <p>When I'm not coding, you'll find me reading research papers, contributing to open-source projects, or exploring the outdoors. I believe the best software is built with both technical rigor and human empathy.</p>
+      <ul class="about-info-list">
+        <li><strong>University</strong> <span>State University of Technology, Class of 2026</span></li>
+        <li><strong>Major</strong> <span>B.Sc. Computer Science (Honours)</span></li>
+        <li><strong>GPA</strong> <span>3.9 / 4.0</span></li>
+        <li><strong>Location</strong> <span>Colombo, Sri Lanka</span></li>
+        <li><strong>Status</strong> <span>Seeking internship / graduate roles</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section-alt">
+  <div class="section-header">
+    <span class="section-label">02 — Expertise</span>
+    <h2 class="section-title">Skills & Technologies</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-card-icon">💻</div>
+      <h4>Languages</h4>
+      <div class="skill-tags">
+        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span>
+        <span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">SQL</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">🌐</div>
+      <h4>Web Development</h4>
+      <div class="skill-tags">
+        <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">HTML/CSS</span>
+        <span class="tag">Express</span><span class="tag">REST APIs</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">🤖</div>
+      <h4>ML & Data Science</h4>
+      <div class="skill-tags">
+        <span class="tag">PyTorch</span><span class="tag">scikit-learn</span>
+        <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Jupyter</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">🛠️</div>
+      <h4>Tools & Platforms</h4>
+      <div class="skill-tags">
+        <span class="tag">Git</span><span class="tag">Docker</span>
+        <span class="tag">Linux</span><span class="tag">AWS</span><span class="tag">PostgreSQL</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">⚙️</div>
+      <h4>CS Fundamentals</h4>
+      <div class="skill-tags">
+        <span class="tag">Algorithms</span><span class="tag">Data Structures</span>
+        <span class="tag">OS</span><span class="tag">Networking</span><span class="tag">Compilers</span>
+      </div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-card-icon">🤝</div>
+      <h4>Soft Skills</h4>
+      <div class="skill-tags">
+        <span class="tag">Communication</span><span class="tag">Teamwork</span>
+        <span class="tag">Problem-Solving</span><span class="tag">Leadership</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section-dark">
+  <div class="section-header">
+    <span class="section-label">03 — Work</span>
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-number">PROJECT 01</div>
+      <h3>SmartScheduler AI</h3>
+      <p>An intelligent timetable generator using constraint satisfaction and ML to optimise university course scheduling with conflict resolution.</p>
+      <div class="skill-tags" style="margin-bottom:1.25rem">
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">Python</span>
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">PyTorch</span>
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">Flask</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+        <a href="#" class="project-link">Live Demo →</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-number">PROJECT 02</div>
+      <h3>Distributed File System</h3>
+      <p>A fault-tolerant distributed file system built from scratch implementing Raft consensus for leader election and log replication.</p>
+      <div class="skill-tags" style="margin-bottom:1.25rem">
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">Go</span>
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">Raft</span>
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">Docker</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-number">PROJECT 03</div>
+      <h3>E-Commerce Platform</h3>
+      <p>Full-stack e-commerce web app with JWT auth, payment integration, real-time inventory management, and admin analytics dashboard.</p>
+      <div class="skill-tags" style="margin-bottom:1.25rem">
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">React</span>
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">Node.js</span>
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">PostgreSQL</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+        <a href="#" class="project-link">Live Demo →</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-number">PROJECT 04</div>
+      <h3>Sentiment Analysis Tool</h3>
+      <p>NLP pipeline for real-time social media sentiment analysis using transformer models, with a clean dashboard for visualisation.</p>
+      <div class="skill-tags" style="margin-bottom:1.25rem">
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">Python</span>
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">HuggingFace</span>
+        <span class="tag" style="border-color:rgba(201,168,76,0.3);color:rgba(255,255,255,0.5)">Streamlit</span>
+      </div>
+      <div class="project-links">
+        <a href="#" class="project-link">GitHub →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section id="articles">
+  <div class="section-header">
+    <span class="section-label">04 — Writing</span>
+    <h2 class="section-title">Articles & Posts</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="articles-list">
+    <a href="#" class="article-item">
+      <div>
+        <div class="article-title">Understanding the Raft Consensus Algorithm</div>
+        <div class="article-desc">A deep dive into leader election, log replication, and fault tolerance in distributed systems.</div>
+      </div>
+      <div class="article-date">MAR 2025</div>
+    </a>
+    <a href="#" class="article-item">
+      <div>
+        <div class="article-title">Why I Switched from React to SvelteKit</div>
+        <div class="article-desc">My honest experience after building three production apps in SvelteKit and what I learned along the way.</div>
+      </div>
+      <div class="article-date">JAN 2025</div>
+    </a>
+    <a href="#" class="article-item">
+      <div>
+        <div class="article-title">Demystifying Transformers: Attention is All You Need</div>
+        <div class="article-desc">Breaking down the seminal paper for undergrads — no PhD required.</div>
+      </div>
+      <div class="article-date">NOV 2024</div>
+    </a>
+    <a href="#" class="article-item">
+      <div>
+        <div class="article-title">Getting Started with Competitive Programming</div>
+        <div class="article-desc">Resources, routines, and mindset shifts that helped me go from beginner to Codeforces Expert in six months.</div>
+      </div>
+      <div class="article-date">AUG 2024</div>
+    </a>
+  </div>
+</section>
+
+<!-- MEMORIES -->
+<section id="memories" class="section-alt">
+  <div class="section-header">
+    <span class="section-label">05 — Gallery</span>
+    <h2 class="section-title">Memories</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="memories-grid">
+    <div class="memory-card">
+      <div class="memory-img">📸</div>
+      <div class="memory-body">
+        <h4>Hackathon Win — HackMIT</h4>
+        <p>October 2024 · Cambridge, MA</p>
+      </div>
+    </div>
+    <div class="memory-card">
+      <div class="memory-img">🎓</div>
+      <div class="memory-body">
+        <h4>Dean's List Ceremony</h4>
+        <p>May 2024 · Campus</p>
+      </div>
+    </div>
+    <div class="memory-card">
+      <div class="memory-img">🤝</div>
+      <div class="memory-body">
+        <h4>Google I/O Extended</h4>
+        <p>June 2024 · Colombo</p>
+      </div>
+    </div>
+    <div class="memory-card">
+      <div class="memory-img">💻</div>
+      <div class="memory-body">
+        <h4>Open Source Sprint</h4>
+        <p>March 2024 · Remote</p>
+      </div>
+    </div>
+    <div class="memory-card">
+      <div class="memory-img">🏆</div>
+      <div class="memory-body">
+        <h4>ICPC Regional Qualifier</h4>
+        <p>November 2023 · Colombo</p>
+      </div>
+    </div>
+    <div class="memory-card">
+      <div class="memory-img">🌏</div>
+      <div class="memory-body">
+        <h4>Tech Conference Talk</h4>
+        <p>September 2023 · Colombo</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CV -->
+<section id="cv">
+  <div class="section-header">
+    <span class="section-label">06 — Résumé</span>
+    <h2 class="section-title">Curriculum Vitae</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="cv-section">
+    <div class="cv-block">
+      <div class="cv-block-title">Education</div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">2022 – Present</div>
+        <div class="cv-entry-content">
+          <h4>B.Sc. Computer Science (Honours)</h4>
+          <div class="cv-org">State University of Technology</div>
+          <p>GPA 3.9/4.0 · Dean's List 2023, 2024 · Specialisation in AI & Distributed Systems</p>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">2019 – 2022</div>
+        <div class="cv-entry-content">
+          <h4>Advanced Level — Mathematics, Physics, ICT</h4>
+          <div class="cv-org">National College, Colombo</div>
+          <p>Island Rank Top 100 · School Prefect · Computer Club President</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <div class="cv-block-title">Experience</div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">Jun – Aug 2024</div>
+        <div class="cv-entry-content">
+          <h4>Software Engineering Intern</h4>
+          <div class="cv-org">TechCorp Asia, Colombo</div>
+          <p>Developed microservices in Node.js; reduced API response time by 35% through query optimisation and caching.</p>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">Jan – May 2024</div>
+        <div class="cv-entry-content">
+          <h4>Undergraduate Research Assistant</h4>
+          <div class="cv-org">AI Lab, State University of Technology</div>
+          <p>Assisted Prof. Silva in NLP research; co-authored a paper on low-resource language models for Sinhala.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-block">
+      <div class="cv-block-title">Achievements & Awards</div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">2024</div>
+        <div class="cv-entry-content">
+          <h4>1st Place — National Hackathon</h4>
+          <div class="cv-org">Sri Lanka Association for the Advancement of Computing</div>
+        </div>
+      </div>
+      <div class="cv-entry">
+        <div class="cv-entry-date">2023</div>
+        <div class="cv-entry-content">
+          <h4>ICPC Asia Regional Contestant</h4>
+          <div class="cv-org">International Collegiate Programming Contest</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cv-download-wrap">
+      <a href="#" class="btn btn-gold" style="font-size:0.875rem">⬇ Download Full CV (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section-dark">
+  <div class="section-header">
+    <span class="section-label">07 — Get in Touch</span>
+    <h2 class="section-title">Contact</h2>
+    <div class="divider"></div>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h3>Let's build something together.</h3>
+      <p>Whether you have an internship opportunity, a collaboration idea, or just want to connect — my inbox is always open.</p>
+      <div class="contact-links">
+        <a href="mailto:alex@example.com" class="contact-link">
+          <span class="contact-link-icon">✉</span> alex@example.com
+        </a>
+        <a href="https://github.com" target="_blank" class="contact-link">
+          <span class="contact-link-icon">⌥</span> github.com/alexmorgan
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="contact-link">
+          <span class="contact-link-icon">in</span> linkedin.com/in/alexmorgan
+        </a>
+        <a href="https://twitter.com" target="_blank" class="contact-link">
+          <span class="contact-link-icon">𝕏</span> @alexmorgan
+        </a>
+      </div>
+    </div>
+    <div class="contact-form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Jane Smith" />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="jane@example.com" />
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="5" placeholder="Hi Alex, I'd love to discuss..."></textarea>
+      </div>
+      <button class="form-submit">Send Message</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <span>Alex Morgan</span> · Designed & Built with care · Colombo, Sri Lanka</p>
+</footer>
+
+<script>
+  // Smooth active nav highlight
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.getAttribute('id');
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold)' : '';
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.skill-card, .project-card, .memory-card, .article-item, .cv-entry').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
