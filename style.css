@@ -522,30 +522,53 @@ section { padding: 6rem 5%; }
 .article-desc { font-size: 0.875rem; color: var(--light-slate); font-weight: 300; }
 
 /* ── MEMORIES ── */
-.memories-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+.memories-slider-wrapper {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
 }
+
+.memories-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1.5rem;
+  padding: 1rem 0 2rem;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.memories-slider::-webkit-scrollbar {
+  display: none;
+}
+
 .memory-card {
-  background: var(--navy);
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid rgba(201,168,76,0.15);
+  flex: 0 0 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.25s;
 }
 .memory-card:hover { transform: scale(1.025); }
 .memory-img {
-  width: 100%; aspect-ratio: 4/3;
-  background: linear-gradient(135deg, #1a2f45, #0d1b2a);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2rem; color: rgba(201,168,76,0.3);
+  width: fit-content;
+  max-width: 600px; /* Constrain width */
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.memory-body { padding: 1rem; }
-.memory-body h4 { font-family: 'Playfair Display', serif; font-size: 0.95rem; color: var(--white); margin-bottom: 0.25rem; }
-.memory-body p { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
+.memory-img img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 500px; /* Prevent over-tall images */
+  display: block;
+}
 
 /* ── CV ── */
 .cv-section { max-width: 760px; margin: 0 auto; }
@@ -648,12 +671,10 @@ footer span { color: var(--gold); }
   .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .cv-entry { grid-template-columns: 1fr; gap: 0.25rem; }
-  .memories-grid { grid-template-columns: repeat(2,1fr); }
   .nav-links { display: none; }
 }
 @media (max-width: 600px) {
   .nav-links { display: none; }
 }
 @media (max-width: 480px) {
-  .memories-grid { grid-template-columns: 1fr; }
 }
