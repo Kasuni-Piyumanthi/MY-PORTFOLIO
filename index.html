@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Kasuni Jayasekara — Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kasuni Jayasekara — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a class="nav-logo" href="#hero">Kasuni.</a>
   <ul class="nav-links">
@@ -23,18 +22,50 @@
   </ul>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
+  <canvas id="bg-canvas"></canvas>
+
   <div class="hero-inner">
-    <div class="hero-label">Computer Science Undergraduate</div>
-    <h1 class="hero-name">Kasuni <span>Jayasekara</span></h1>
-    <p class="hero-tagline">Code. Create. Impact.</p>
-    <div class="hero-cta">
-      <a href="#projects" class="btn btn-gold">View Projects</a>
-      <a href="#cv" class="btn btn-outline">Download CV</a>
+
+    <!-- Original text — unchanged -->
+    <div class="hero-text">
+      <div class="hero-label">Computer Science Undergraduate</div>
+      <h1 class="hero-name">Kasuni <span>Jayasekara</span></h1>
+      <p class="hero-tagline">Code. Create. Impact.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-gold">View Projects</a>
+        <a href="#cv" class="btn btn-outline">Download CV</a>
+      </div>
     </div>
+
+    <!-- Anime character: use YOUR image here -->
+    <div class="hero-anime">
+      <div class="char-halo"></div>
+      <div class="anime-float">
+        <div class="anime-img-wrap">
+          <!-- Replace "anime-girl.png" with whatever filename you save your image as -->
+          <img src="images/anime-girl.jpg" alt="Kasuni avatar" class="anime-img" />
+
+          <!-- floating code chips -->
+          <div class="chip chip-1"><span class="cdot py"></span>Python</div>
+          <div class="chip chip-2"><span class="cdot js"></span>React</div>
+          <div class="chip chip-3"><span class="cdot ml"></span>ML / AI</div>
+
+          <!-- sparkle dots rendered in CSS -->
+          <div class="sparkle s1">✦</div>
+          <div class="sparkle s2">✦</div>
+          <div class="sparkle s3">✧</div>
+          <div class="sparkle s4">✦</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
+
+<script src="hero.js"></script>
+</body>
+</html>
 
 <!-- ABOUT -->
 <section id="about">
@@ -46,7 +77,7 @@
   <div class="about-grid">
     <div class="about-photo-wrap">
       <div class="about-photo-placeholder">
-        <img src="images/photo.png" alt="My Photo" class="about-photo">
+        <img src="images/my-photo.png" alt="My Photo" class="about-photo">
         <div class="about-photo-frame"></div>
       </div>
       <div class="about-photo-frame"></div>
@@ -56,11 +87,10 @@
       <p>I am a second year Computer Science student at IIT Sri Lanka, pursuing a BSc(Hons) in Computer Science awarded by the University of Westminster. I am passionate about software engineering, mobile application development, machine learning, and open source contributions. I enjoy translating complex concepts into clean, functional, and scalable solutions.</p>
       <p>When I'm not coding, you'll find me reading research papers, contributing to open source projects, or exploring the outdoors. I believe the best software is built with both technical rigor and human empathy.</p>
       <ul class="about-info-list">
-        <li><strong>University</strong> <span>State University of Technology, Class of 2026</span></li>
-        <li><strong>Major</strong> <span>B.Sc. Computer Science (Honours)</span></li>
-        <li><strong>GPA</strong> <span>3.9 / 4.0</span></li>
+        <li><strong>University</strong> <span>Informatics Institute of Technology, Sri Lanka (Degree awarded by University of Westminster)</span></li>
+        <li><strong>Major</strong> <span>BSc(Hons) in Computer Science</span></li>
         <li><strong>Location</strong> <span>Colombo, Sri Lanka</span></li>
-        <li><strong>Status</strong> <span>Seeking internship / graduate roles</span></li>
+        <li><strong>Status</strong> <span>Seeking internship</span></li>
       </ul>
     </div>
   </div>
@@ -73,55 +103,81 @@
     <h2 class="section-title">Skills & Technologies</h2>
     <div class="divider"></div>
   </div>
+
   <div class="skills-grid">
+
     <div class="skill-card">
       <div class="skill-card-icon">💻</div>
       <h4>Languages</h4>
       <div class="skill-tags">
-        <span class="tag">Python</span><span class="tag">Java</span><span class="tag">C++</span>
-        <span class="tag">JavaScript</span><span class="tag">TypeScript</span><span class="tag">SQL</span>
+        <span class="tag">Python</span>
+        <span class="tag">Java</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">SQL</span>
       </div>
     </div>
+
     <div class="skill-card">
       <div class="skill-card-icon">🌐</div>
       <h4>Web Development</h4>
       <div class="skill-tags">
-        <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">HTML/CSS</span>
-        <span class="tag">Express</span><span class="tag">REST APIs</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">Express</span>
+        <span class="tag">REST APIs</span>
+        <span class="tag">FastAPI</span>
       </div>
     </div>
+
     <div class="skill-card">
       <div class="skill-card-icon">🤖</div>
       <h4>ML & Data Science</h4>
       <div class="skill-tags">
-        <span class="tag">PyTorch</span><span class="tag">scikit-learn</span>
-        <span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Jupyter</span>
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Jupyter</span>
       </div>
     </div>
+
     <div class="skill-card">
       <div class="skill-card-icon">🛠️</div>
       <h4>Tools & Platforms</h4>
       <div class="skill-tags">
-        <span class="tag">Git</span><span class="tag">Docker</span>
-        <span class="tag">Linux</span><span class="tag">AWS</span><span class="tag">PostgreSQL</span>
+        <span class="tag">Git</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Linux</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Postman</span>
+        <span class="tag">MongoDB</span>
+        <span class="tag">LaTeX</span>
       </div>
     </div>
+
     <div class="skill-card">
       <div class="skill-card-icon">⚙️</div>
       <h4>CS Fundamentals</h4>
       <div class="skill-tags">
-        <span class="tag">Algorithms</span><span class="tag">Data Structures</span>
-        <span class="tag">OS</span><span class="tag">Networking</span><span class="tag">Compilers</span>
+        <span class="tag">Algorithms</span>
+        <span class="tag">Data Structures</span>
+        <span class="tag">Operating Systems</span>
+        <span class="tag">Networking</span>
+        <span class="tag">Compilers</span>
+        <span class="tag">IT Security</span>
       </div>
     </div>
+
     <div class="skill-card">
       <div class="skill-card-icon">🤝</div>
       <h4>Soft Skills</h4>
       <div class="skill-tags">
-        <span class="tag">Communication</span><span class="tag">Teamwork</span>
-        <span class="tag">Problem-Solving</span><span class="tag">Leadership</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Teamwork</span>
+        <span class="tag">Problem Solving</span>
+        <span class="tag">Leadership</span>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -129,7 +185,7 @@
 <section id="projects" class="section-dark">
   <div class="section-header">
     <span class="section-label">03 — Work</span>
-    <h2 class="section-title">Selected Projects</h2>
+    <h2 class="section-title">Projects</h2>
     <div class="divider"></div>
   </div>
   <div class="projects-grid">
@@ -211,20 +267,6 @@
         <div class="article-desc">My honest experience after building three production apps in SvelteKit and what I learned along the way.</div>
       </div>
       <div class="article-date">JAN 2025</div>
-    </a>
-    <a href="#" class="article-item">
-      <div>
-        <div class="article-title">Demystifying Transformers: Attention is All You Need</div>
-        <div class="article-desc">Breaking down the seminal paper for undergrads — no PhD required.</div>
-      </div>
-      <div class="article-date">NOV 2024</div>
-    </a>
-    <a href="#" class="article-item">
-      <div>
-        <div class="article-title">Getting Started with Competitive Programming</div>
-        <div class="article-desc">Resources, routines, and mindset shifts that helped me go from beginner to Codeforces Expert in six months.</div>
-      </div>
-      <div class="article-date">AUG 2024</div>
     </a>
   </div>
 </section>
@@ -366,17 +408,17 @@
       <h3>Let's build something together.</h3>
       <p>Whether you have an internship opportunity, a collaboration idea, or just want to connect — my inbox is always open.</p>
       <div class="contact-links">
-        <a href="mailto:alex@example.com" class="contact-link">
-          <span class="contact-link-icon">✉</span> alex@example.com
+        <a href="mailto:kasuni@example.com" class="contact-link">
+          <span class="contact-link-icon">✉</span> kasuni@example.com
         </a>
         <a href="https://github.com" target="_blank" class="contact-link">
-          <span class="contact-link-icon">⌥</span> github.com/alexmorgan
+          <span class="contact-link-icon">⌥</span> github.com/kasuni
         </a>
         <a href="https://linkedin.com" target="_blank" class="contact-link">
-          <span class="contact-link-icon">in</span> linkedin.com/in/alexmorgan
+          <span class="contact-link-icon">in</span> linkedin.com/in/kasuni
         </a>
         <a href="https://twitter.com" target="_blank" class="contact-link">
-          <span class="contact-link-icon">𝕏</span> @alexmorgan
+          <span class="contact-link-icon">𝕏</span> @kasuni
         </a>
       </div>
     </div>
@@ -391,7 +433,7 @@
       </div>
       <div class="form-group">
         <label>Message</label>
-        <textarea rows="5" placeholder="Hi Alex, I'd love to discuss..."></textarea>
+        <textarea rows="5" placeholder="Hi Kasuni, I'd love to discuss..."></textarea>
       </div>
       <button class="form-submit">Send Message</button>
     </div>
@@ -400,7 +442,7 @@
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2025 <span>Alex Morgan</span> · Designed & Built with care · Colombo, Sri Lanka</p>
+  <p>© 2026 <span>Kasuni Jayasekara</span> · Designed & Built with care · Colombo, Sri Lanka</p>
 </footer>
 
 <script>
