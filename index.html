@@ -512,19 +512,22 @@ technical skills, collaboration, and innovative problem-solving under competitiv
       </div>
     </div>
     <div class="contact-form">
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" placeholder="Jane Smith" />
-      </div>
-      <div class="form-group">
-        <label>Email</label>
-        <input type="email" placeholder="jane@example.com" />
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea rows="5" placeholder="Hi Kasuni, I'd love to discuss..."></textarea>
-      </div>
-      <button class="form-submit">Send Message</button>
+      <form id="contact-form" action="https://script.google.com/macros/s/AKfycbz6Nq11V7wszGNwmrAbyBvsRkizKh9_n_oHJwdejy_mCgv-GINrtWttQg8eyd26oPfD/exec" method="POST">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" placeholder="Jane Smith" required />
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="jane@example.com" required />
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" rows="5" placeholder="Hi Kasuni, I'd love to discuss..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit" id="submit-btn">Send Message</button>
+        <div id="form-status" style="margin-top: 1rem; font-size: 0.875rem; display: none;"></div>
+      </form>
     </div>
   </div>
 </section>
@@ -565,7 +568,7 @@ technical skills, collaboration, and innovative problem-solving under competitiv
     observer.observe(el);
   });
 
-  // Memories Slider Autoplay
+    // Memories Slider Autoplay
   const slider = document.getElementById('memoriesSlider');
 
   if(slider) {
@@ -595,6 +598,62 @@ technical skills, collaboration, and innovative problem-solving under competitiv
     slider.addEventListener('mouseleave', startAutoPlay);
     slider.addEventListener('touchstart', stopAutoPlay);
     slider.addEventListener('touchend', startAutoPlay);
+  }
+
+  // Contact Form Submission
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  const submitBtn = document.getElementById('submit-btn');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(contactForm);
+      submitBtn.disabled = true;
+      submitBtn.innerText = 'Sending...';
+      
+      formStatus.style.display = 'block';
+      formStatus.style.color = 'var(--gold)';
+      formStatus.innerText = 'Sending your message...';
+
+      try {
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          const data = await response.json();
+          if (data.result === 'success') {
+            formStatus.innerText = 'Thanks! Your message has been sent to the Google Sheet.';
+            formStatus.style.color = '#4ade80';
+            contactForm.reset();
+          } else {
+            const errorMsg = typeof data.error === 'object' ? JSON.stringify(data.error) : data.error;
+            formStatus.innerText = 'Oops! ' + (errorMsg || 'The sheet rejected the message.');
+            formStatus.style.color = '#ef4444';
+          }
+        } else {
+          const data = await response.json();
+          if (Object.hasOwn(data, 'errors')) {
+            formStatus.innerText = data["errors"].map(error => error["message"]).join(", ");
+          } else {
+            formStatus.innerText = 'Oops! There was a problem submitting your form.';
+          }
+          formStatus.style.color = '#ef4444'; // Red error color
+        }
+      } catch (error) {
+        formStatus.innerText = 'Oops! Connection error. Please try again later.';
+        formStatus.style.color = '#ef4444';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.innerText = 'Send Message';
+      }
+    });
   }
 </script>
 </body>
