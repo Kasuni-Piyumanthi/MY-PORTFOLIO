@@ -629,7 +629,7 @@ technical skills, collaboration, and innovative problem-solving under competitiv
         if (response.ok) {
           const data = await response.json();
           if (data.result === 'success') {
-            formStatus.innerText = 'Thanks! Your message has been sent to the Google Sheet.';
+            formStatus.innerText = 'Thanks! Your message has been sent.';
             formStatus.style.color = '#4ade80';
             contactForm.reset();
           } else {
